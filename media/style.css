@@ -1,0 +1,62 @@
+body{
+    box-sizing: border-box;
+    background-color: lightgray;
+}
+
+*, *:after, *:before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+ul{
+    list-style-type: none;
+}
+img{
+    width: 100%;
+}
+
+
+/* LAYOUT styles */
+.container{
+    width: 1000px;
+    margin: auto;
+}
+aside, main{
+    float: left;
+    background-color: white;
+}
+
+/* ASIDE STYLES */
+aside{
+    width: 20%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.m-3{
+    margin: 15px;
+}
+.px-3{
+    padding: 0 15px;
+}
+.portfolio-content .title{
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.portfolio-content ul i{
+    margin-right: 15px;
+}
+.portfolio-content a{
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: #222;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.portfolio-content a:hover{
+    color: green;
+    background-color: lightgray;
+}
