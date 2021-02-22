@@ -101,3 +101,24 @@ input{
     background-color: #222;
     color: white;
 }
+/* PHOTO GRID */
+.photo-grid{
+    margin-top:10px;
+}
+.flex-block{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.box{
+    background: white;
+}
+.box img:hover{
+    opacity: 0.7;
+}
+.box .content{
+    padding: 10px;
+}
+.box .title{
+    font-weight: bold;
+}
