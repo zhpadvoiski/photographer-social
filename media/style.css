@@ -15,27 +15,36 @@ ul{
 img{
     width: 100%;
 }
+a{
+    color: inherit;
+}
 
 
 /* LAYOUT styles */
 .container{
-    width: 1000px;
+    max-width: 1600px;
     margin: auto;
 }
-aside, main{
+aside, main, .passive-width{
     float: left;
 }
-aside{
+aside, .passive-width{
     width: 20%;
 }
 main{
     width: 80%;
 }
+.passive-width{
+    height: 1px;
+}
 
 /* ASIDE STYLES */
 aside{
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
     background-color: white;
+    overflow: auto;
 }
 .m-3{
     margin: 15px;
@@ -65,11 +74,17 @@ aside{
 }
 
 /* MAIN style */
+main .profile-picture{
+    display: none;
+}
+.main-container{
+    padding: 0 20px;
+}
 header{
     border-bottom: 4px solid lightgray;
 }
 header h1{
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 .filter{
     margin-bottom: 10px;
@@ -142,9 +157,14 @@ input{
 }
 /* MAIN PICTURES BLOCK */
 .main-pictures{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 10px;
+    display: flex;
+    gap: 10px;
+}
+.main-pictures .image{
+    flex: 1;
+}
+.main-pictures .image img{
+    display: block;
 }
 /* ABOUT ME */
 .about-me{
@@ -183,12 +203,20 @@ input{
 /* FOOTER */
 footer{
     display: flex;
+    gap: 20px;
     padding: 40px 30px;
     color: rgb(230, 230, 230);
     background: rgb(104, 98, 98);
 }
 footer .content-block{
     flex: 1;
+}
+footer .content-block .title{
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+footer .content-block p{
+    margin-bottom: 20px;
 }
 footer .content-block ul{
     list-style-type: none;
@@ -209,9 +237,65 @@ footer .list-item-content{
     display: inline-block;
     vertical-align: middle;
 }
-footer .list-item-content .title{
+footer .list-item-content .head{
     font-size: 1.2em;
 }
 footer ul li + li{
     border-top: 1px solid rgb(230, 230, 230);
+}
+footer .content-block span{
+    display: inline-block;
+    margin-top: 3px;
+    font-size: 0.8em;
+    padding: 2px 4px;
+    background-color: gray;
+    color: black;
+}
+footer .content-block span.popular{
+    background-color: #222;
+    color: white;
+    padding: 4px 6px;
+}
+/* FOOTER end */
+.signature{
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background: #222;
+}
+
+@media screen and (max-width: 992px){
+    aside, .passive-width{
+        display: none;
+    }
+    main{
+        float:none;
+        width: 100%;
+    }
+    main .profile-picture{
+        position: absolute;
+        right: 10px;
+        display: block;
+        width: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    main .profile-picture img{
+        display: block;
+    }
+}
+@media screen and (max-width: 768px){
+    .flex-block{
+        grid-template-columns: 1fr;
+    }
+    .main-pictures{
+        flex-direction: column;
+        gap: 0;
+    }
+    .contact-block, footer{
+        flex-direction: column;
+    }
+    .filter-box li:nth-child(3), .filter-box li:nth-child(4){
+        display: none;
+    }
 }
