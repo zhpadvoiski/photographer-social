@@ -146,3 +146,36 @@ input{
     grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
 }
+/* ABOUT ME */
+.about-me{
+    margin: 30px 0;
+}
+/* CONTACT ME */
+.contact-me{
+    background-color: gray;
+    padding: 20px;
+}
+.contact-me h3{
+    margin-bottom: 30px;
+}
+.contact-block{
+    display: flex;
+}
+.contact-box{
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    color: rgb(230, 230, 230);
+    background: rgb(104, 98, 98);
+}
+.contact-box i{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.contact-box a{
+    text-decoration: none;
+    color: inherit;
+}
+.middle{
+    background-color: rgb(58, 133, 109);
+}
